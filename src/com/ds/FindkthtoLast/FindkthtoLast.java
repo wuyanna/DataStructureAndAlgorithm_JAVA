@@ -1,5 +1,5 @@
 package Question2_2;
-
+//linkedlist - To find the kth to Last
 
 public class FindkthtoLast {
 
