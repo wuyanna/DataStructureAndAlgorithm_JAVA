@@ -8,7 +8,7 @@
  * If the "compressed" string would not become smaller than the original string,
  * your method should return the original string.
  * 
- * Solution - pg 172
+ * Solution - pg 176
  * 
  */
 package com.question.arrays;
