@@ -2,7 +2,7 @@ package com.ds.linkedlist;
 
 public class SinglyLinkedList<T> {
 
-	private Node<T> head;
+	private SinglyLinkedListNode<T> head;
 
 	public SinglyLinkedList() {
 		head = null;
@@ -10,73 +10,75 @@ public class SinglyLinkedList<T> {
 
 	public void addFirst(T element) {
 
-		Node<T> node = new Node<T>(element, head);
+		SinglyLinkedListNode<T> node = new SinglyLinkedListNode<T>(head, element);
 		this.head = node;
 	}
 
 	public void addLast(T element) {
-		Node<T> node = new Node<T>(element, null);
-		Node<T> temp = this.head;
-		while (temp.next != null) {
-			temp = temp.next;
+		SinglyLinkedListNode<T> node = new SinglyLinkedListNode<T>(null, element);
+		if (this.head == null) {
+			this.head = node;
+		} else {
+			SinglyLinkedListNode<T> temp = this.head;
+			while (temp.getNext() != null) {
+				temp = temp.getNext();
+			}
+			temp.setNext(node);
 		}
-		temp.next = node;
 	}
 
 	public T getFirst() {
-		return this.head.data;
+		return this.head.getData();
 	}
 
 	public T getLast() {
 		if (this.head == null) return null;
-		Node<T> temp = this.head;
-		while (temp.next != null) {
-			temp = temp.next;
+		SinglyLinkedListNode<T> temp = this.head;
+		while (temp.getNext() != null) {
+			temp = temp.getNext();
 		}
-		return temp.data;
+		return temp.getData();
 	}
 
 	public T removeFirst() {
 		if (this.head == null) return null;
-		Node<T> node = this.head;
-		this.head = node.next;
-		return node.data;
+		SinglyLinkedListNode<T> node = this.head;
+		this.head = node.getNext();
+		return node.getData();
 
 	}
 
 	public T removeLast() {
 		if (this.head == null) return null;
-		Node<T> temp = this.head;
-		Node<T> prev = temp;
-		while (temp.next != null) {
+		SinglyLinkedListNode<T> temp = this.head;
+		SinglyLinkedListNode<T> prev = temp;
+		while (temp.getNext() != null) {
 			prev = temp;
-			temp = temp.next;
+			temp = temp.getNext();
 		}
-		prev.next = null;
-		return temp.data;
+		prev.setNext(null);
+		return temp.getData();
+	}
+	
+	public SinglyLinkedListNode<T> generateList(T[] datalist) {
+		SinglyLinkedList<T> ll = new SinglyLinkedList<T>();
+		for (T d : datalist) {
+			ll.addLast(d);
+		}
+		return ll.head;
 	}
 
 	@Override
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
 		if (this.head == null) return "-";
-		Node<T> temp = this.head;
-		while (temp.next != null) {
-			buf.append(temp.data.toString() + "->");
-			temp = temp.next;
+		SinglyLinkedListNode<T> temp = this.head;
+		while (temp.getNext() != null) {
+			buf.append(temp.getData().toString() + "->");
+			temp = temp.getNext();
 		}
-		buf.append(temp.data.toString());
+		buf.append(temp.getData().toString());
 		return buf.toString();
-	}
-
-	private static class Node<T> {
-		private Node<T> next;
-		private T data;
-
-		public Node(T data, Node<T> next) {
-			this.next = next;
-			this.data = data;
-		}
 	}
 
 	public static void main(String[] args) {
@@ -94,5 +96,9 @@ public class SinglyLinkedList<T> {
 		System.out.println(list);
 		list.removeFirst();
 		System.out.println(list);
+		
+		Integer[] ds = {2,34,2,55};
+		SinglyLinkedListNode<Integer> root = list.generateList(ds);
+		System.out.println(root);
 	}
 }
