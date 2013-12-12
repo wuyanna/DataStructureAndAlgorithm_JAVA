@@ -59,7 +59,6 @@ public class LLRemoveDuplicates {
 		SinglyLinkedList<Integer> ll = new SinglyLinkedList<Integer>();
 		Integer[] datalist = { 2, 1, 2, 3, 3, 4, 3, 5 };
 		SinglyLinkedListNode<Integer> root = ll.generateList(datalist);
-		System.out.println(ll);
 		LLRemoveDuplicates rv = new LLRemoveDuplicates();
 		rv.removeDupNoBuf(root);
 		System.out.println(root);
