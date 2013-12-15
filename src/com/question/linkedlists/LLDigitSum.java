@@ -29,6 +29,8 @@ import com.ds.linkedlist.SinglyLinkedListNode;
 
 public class LLDigitSum {
 	
+	// TODO forward order
+	
 	public SinglyLinkedListNode<Integer> digitSum(
 			SinglyLinkedListNode<Integer> l1, 
 			SinglyLinkedListNode<Integer> l2) {
