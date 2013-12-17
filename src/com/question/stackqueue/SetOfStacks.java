@@ -55,7 +55,11 @@ public class SetOfStacks<T> implements IStack<T> {
 
 	@Override
 	public T pop() {
-		return getStackById(--nItems).pop();
+		IStack<T> stack = getStackById(--nItems);
+		if (stack.isEmpty()) {
+			return this.pop();
+		}
+		return stack.pop();
 	}
 
 	@Override
@@ -108,11 +112,23 @@ public class SetOfStacks<T> implements IStack<T> {
 		stack.push(45);
 		stack.push(23);
 		stack.push(98);
-		stack.push(11);
-		stack.push(78);
-		stack.push(21);
 		System.out.println(stack);
-
+		((SetOfStacks<Integer>)stack).popAt(1);
+		System.out.println(stack);
+		((SetOfStacks<Integer>)stack).popAt(1);
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
+		stack.pop();
+		System.out.println(stack);
 	}
 
 }
