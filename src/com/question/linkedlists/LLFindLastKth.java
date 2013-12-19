@@ -15,7 +15,8 @@ import com.ds.linkedlist.SinglyLinkedListNode;
 
 public class LLFindLastKth {
 
-	public Integer kthToLast(SinglyLinkedListNode<Integer> root, int k) {
+	// most naive, get length first then find length - k node.
+	public Integer kthToLast1(SinglyLinkedListNode<Integer> root, int k) {
 		int length = 0;
 		SinglyLinkedListNode<Integer> temp = root;
 		while (temp != null) {
@@ -30,14 +31,30 @@ public class LLFindLastKth {
 		}
 		return temp.getData();
 	}
+	
+	// Iterate with two pointers that are k nodes apart.
+	public Integer kthToLast2(SinglyLinkedListNode<Integer> head, int k) {
+		if (head == null) return null;
+		SinglyLinkedListNode<Integer> chase = head;
+		while (chase != null) {
+			chase = chase.getNext();
+			if (k > 0) {
+				k--;
+			} else {
+				head = head.getNext();
+			}
+		}
+		if (k > 0) return null;
+		return head.getData();
+	}
 
 	public static void main(String[] args) {
 		SinglyLinkedList<Integer> ll = new SinglyLinkedList<Integer>();
-		Integer[] datalist = { 2, 1, 2, 3, 3, 4, 3, 5 };
+		Integer[] datalist = { 1,2,3};
 		SinglyLinkedListNode<Integer> root = ll.generateList(datalist);
 		LLFindLastKth last = new LLFindLastKth();
 
-		System.out.println(last.kthToLast(root, 3));
+		System.out.println(last.kthToLast2(root, 3));
 
 	}
 
