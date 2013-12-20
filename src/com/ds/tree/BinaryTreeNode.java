@@ -4,6 +4,9 @@ public class BinaryTreeNode<T> {
 	private BinaryTreeNode<T> left, right;
 	private T value;
 	
+	public BinaryTreeNode(T value) {
+		this.value = value;
+	}
 	public BinaryTreeNode<T> getLeft() {
 		return left;
 	}
