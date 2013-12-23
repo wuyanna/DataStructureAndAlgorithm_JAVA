@@ -17,21 +17,28 @@ public class BinaryTreeBST {
 	public boolean isBST(BinaryTreeNode<Integer> root) {
 		if (root == null) return true;
 		boolean leftValid = 
-				root.getLeft() == null ? true : root.getLeft().getValue() <= root.getValue();
+				root.getLeft() == null ? true : max(root.getLeft()) <= root.getValue();
 		boolean rightValid = 
-				root.getRight() == null ? true : root.getRight().getValue() > root.getValue();
+				root.getRight() == null ? true : max(root.getRight()) > root.getValue();
 		if (leftValid && rightValid) {
 			return isBST(root.getLeft()) && isBST(root.getRight());
 		}
 		return false;
 	}
+	
+	public Integer max(BinaryTreeNode<Integer> node) {
+		while (node.getRight() != null) {
+			node = node.getRight();
+		}
+		return node.getValue();
+	}
 
 	public static void main(String[] args) {
-		BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(2);
+		BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(3);
 		BinaryTreeNode<Integer> node1 = new BinaryTreeNode<Integer>(1);
 		BinaryTreeNode<Integer> node2 = new BinaryTreeNode<Integer>(5);
 		BinaryTreeNode<Integer> node3 = new BinaryTreeNode<Integer>(0);
-		BinaryTreeNode<Integer> node4 = new BinaryTreeNode<Integer>(3);
+		BinaryTreeNode<Integer> node4 = new BinaryTreeNode<Integer>(2);
 		BinaryTreeNode<Integer> node5 = new BinaryTreeNode<Integer>(-1);
 		BinaryTreeNode<Integer> node6 = new BinaryTreeNode<Integer>(4);
 		root.setLeft(node1);
