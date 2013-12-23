@@ -145,6 +145,11 @@ public class BinarySearchTree implements IBinarySearchTree {
 			inOrderHelper(nodeToVisit.right);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return root.toString();
+	}
 
 	private static class Node {
 		private int key;
