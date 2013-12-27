@@ -30,18 +30,19 @@ public class GridMove {
 			return 1;
 		return moves(sx, sy, dx, dy - 1) + moves(sx, sy, dx - 1, dy);
 	}
-	
+
+	// TODO: do again later
 	public static boolean getPaths(int x, int y, ArrayList<Point> path) {
 		Point point = new Point(x, y);
-//		path.add(point);
+		// path.add(point);
 		if (x == 0 && y == 0) {
 			return true;
 		}
 		boolean success = false;
-		if (x >= 1 && isFree(x - 1, y)) {	// left
+		if (x >= 1 && isFree(x - 1, y)) { // left
 			success = getPaths(x - 1, y, path);
 		}
-		if (!success && y >= 1 && isFree(x, y - 1)) {	// right
+		if (!success && y >= 1 && isFree(x, y - 1)) { // right
 			success = getPaths(x, y - 1, path);
 		}
 		if (success) {
@@ -49,10 +50,11 @@ public class GridMove {
 		}
 		return success;
 	}
-	
+
 	// customize limits
 	public static boolean isFree(int x, int y) {
-		if (x == y) return false;
+		if (x == y)
+			return false;
 		return true;
 	}
 
