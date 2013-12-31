@@ -1,6 +1,8 @@
+package com.ds.findSumpairs;
+
 import java.util.Arrays;
 
-public class finnSumpairs {	
+public class findSumpairs {	
 	public static void printPairSums(int[] array, int sum) {
 		Arrays.sort(array);
 		int first = 0;
