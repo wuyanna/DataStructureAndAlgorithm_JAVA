@@ -16,9 +16,8 @@ public class stockProfitII {
 	public int maxProfit(int[] prices) {
         int price = 0;
         for (int i = 1; i < prices.length ; i++) {
-            
         	int difference = prices[i] - prices[i-1];
-            
+        
             if (difference > 0 ) {
                 price = price + difference;
             }
