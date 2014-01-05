@@ -65,6 +65,7 @@ public class findCycleLinkedList {
 			if (slow == null || runner == null) {
 				return false;
 			}
+			
 			if (slow == runner) {
 				return true;
 			}
