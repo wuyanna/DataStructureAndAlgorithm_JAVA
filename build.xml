@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="DataStructures">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../Develop/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="DataStructures.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="DataStructures.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Add">
+        <java classname="com.question.hard.Add" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="AnimalQueue">
+        <java classname="com.question.stackqueue.AnimalQueue" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ArrayStack">
+        <java classname="com.ds.stack.ArrayStack" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ArrayTopN">
+        <java classname="com.question.arrays.ArrayTopN" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BalancedBinaryTree">
+        <java classname="com.question.trees.BalancedBinaryTree" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinarySearchTreeBuild">
+        <java classname="com.question.trees.BinarySearchTreeBuild" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinarySearchTreeSuccessor">
+        <java classname="com.question.trees.BinarySearchTreeSuccessor" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinaryTreeBST">
+        <java classname="com.question.trees.BinaryTreeBST" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinaryTreeCommonAncestor">
+        <java classname="com.question.trees.BinaryTreeCommonAncestor" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinaryTreeListAtDepth">
+        <java classname="com.question.trees.BinaryTreeListAtDepth" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinaryTreeSubtree">
+        <java classname="com.question.trees.BinaryTreeSubtree" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BinaryTreeSumPath">
+        <java classname="com.question.trees.BinaryTreeSumPath" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitConvert">
+        <java classname="com.question.bits.BitConvert" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitDecimal">
+        <java classname="com.question.bits.BitDecimal" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitFindMissingInt">
+        <java classname="com.question.bits.BitFindMissingInt" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitInsert">
+        <java classname="com.question.bits.BitInsert" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitMonochrome">
+        <java classname="com.question.bits.BitMonochrome" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitSameNumber">
+        <java classname="com.question.bits.BitSameNumber" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BitSwap">
+        <java classname="com.question.bits.BitSwap" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BoxStack">
+        <java classname="com.question.recursions.BoxStack" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="BST2LinkedList">
+        <java classname="com.question.moderate.BST2LinkedList" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="CircusTower">
+        <java classname="com.question.sort.CircusTower" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="Combinations">
+        <java classname="com.question.LeetCode.Combinations" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ContiguousSequence">
+        <java classname="com.question.moderate.ContiguousSequence" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="Count2s">
+        <java classname="com.question.hard.Count2s" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="EightQueen">
+        <java classname="com.question.recursions.EightQueen" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ExpParenResult">
+        <java classname="com.question.recursions.ExpParenResult" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="FindMedian">
+        <java classname="com.question.hard.FindMedian" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="FindSubsets">
+        <java classname="com.question.recursions.FindSubsets" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="findSumpairs">
+        <java classname="com.question.moderate.FindSumPairs" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="GraphFindRoute">
+        <java classname="com.question.graphs.GraphFindRoute" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="GridMove">
+        <java classname="com.question.recursions.GridMove" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="HanoiTower">
+        <java classname="com.question.stackqueue.HanoiTower" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="IntegerEnglish">
+        <java classname="com.question.moderate.IntegerEnglish" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLCircularRoot">
+        <java classname="com.question.linkedlists.LLCircularRoot" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLDeleteMiddleNode">
+        <java classname="com.question.linkedlists.LLDeleteMiddleNode" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLDigitSum">
+        <java classname="com.question.linkedlists.LLDigitSum" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLFindLastKth">
+        <java classname="com.question.linkedlists.LLFindLastKth" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLPalindrome">
+        <java classname="com.question.linkedlists.LLPalindrome" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLPartitionX">
+        <java classname="com.question.linkedlists.LLPartitionX" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLRemoveDuplicates">
+        <java classname="com.question.linkedlists.LLRemoveDuplicates" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="LLReverse">
+        <java classname="com.question.linkedlists.LLReverse" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MagicIndex">
+        <java classname="com.question.recursions.MagicIndex" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MasterMind">
+        <java classname="com.question.moderate.MasterMind" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MatrixRotate">
+        <java classname="com.question.arrays.MatrixRotate" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MatrixSetZero">
+        <java classname="com.question.arrays.MatrixSetZero" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MatrixSpiral">
+        <java classname="com.question.arrays.MatrixSpiral" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="Maximum">
+        <java classname="com.question.moderate.Maximum" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MaxPoints">
+        <java classname="com.question.LeetCode.MaxPoints" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MergeSort">
+        <java classname="com.algo.sort.MergeSort" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="MergeSortedArray">
+        <java classname="com.question.sort.MergeSortedArray" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="PaintFill">
+        <java classname="com.question.recursions.PaintFill" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ParseDoc">
+        <java classname="com.question.moderate.ParseDoc" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="PrintParentheses">
+        <java classname="com.question.recursions.PrintParentheses" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="QuickSort">
+        <java classname="com.algo.sort.QuickSort" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="RandGen">
+        <java classname="com.question.moderate.RandGen" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="RandomIntArray">
+        <java classname="com.question.hard.RandomIntArray" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="RankInStream">
+        <java classname="com.question.sort.RankInStream" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="RepresentNCents">
+        <java classname="com.question.recursions.RepresentNCents" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ReverseInteger">
+        <java classname="com.question.LeetCode.ReverseInteger" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="RunStairs">
+        <java classname="com.question.recursions.RunStairs" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SearchBook">
+        <java classname="com.question.moderate.SearchBook" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SearchString">
+        <java classname="com.question.hard.SearchString" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SetOfStacks">
+        <java classname="com.question.stackqueue.SetOfStacks" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ShuffleCards">
+        <java classname="com.question.hard.ShuffleCards" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SimpleSort">
+        <java classname="com.algo.sort.SimpleSort" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SingleNumber">
+        <java classname="com.question.LeetCode.SingleNumber" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SinglyLinkedList">
+        <java classname="com.ds.linkedlist.SinglyLinkedList" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortedList2BST">
+        <java classname="com.question.LeetCode.SortedList2BST" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortedMatrix">
+        <java classname="com.question.sort.SortedMatrix" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortedStringsInterspersed">
+        <java classname="com.question.sort.SortedStringsInterspersed" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortRotated">
+        <java classname="com.question.sort.SortRotated" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortSequence">
+        <java classname="com.question.moderate.SortSequence" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortStack">
+        <java classname="com.question.stackqueue.SortStack" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SortStringsByAnagrams">
+        <java classname="com.question.sort.SortStringsByAnagrams" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StackWithMin">
+        <java classname="com.question.stackqueue.StackWithMin" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="String2Integer">
+        <java classname="com.question.LeetCode.String2Integer" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringCompression">
+        <java classname="com.question.arrays.StringCompression" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringHasUniqueChar">
+        <java classname="com.question.arrays.StringHasUniqueChar" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringPermutation">
+        <java classname="com.question.arrays.StringPermutation" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringPermutations">
+        <java classname="com.question.recursions.StringPermutations" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringReplace">
+        <java classname="com.question.arrays.StringReplace" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringReverse">
+        <java classname="com.question.arrays.StringReverse" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="StringRotation">
+        <java classname="com.question.arrays.StringRotation" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SubstringWithConcatenationOfAllWords">
+        <java classname="com.question.LeetCode.SubstringWithConcatenationOfAllWords" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="Sudoku">
+        <java classname="com.question.LeetCode.Sudoku" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="SwapInPlace">
+        <java classname="com.question.moderate.SwapInPlace" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ThreeStacksArray">
+        <java classname="com.question.stackqueue.ThreeStacksArray" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="TicTacToe">
+        <java classname="com.question.moderate.TicTacToe" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="TreeLevelSum">
+        <java classname="com.interview.amazon.TreeLevelSum" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="TwoStacksQueue">
+        <java classname="com.question.stackqueue.TwoStacksQueue" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="WordCombine">
+        <java classname="com.question.hard.WordCombine" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="WordDistance">
+        <java classname="com.question.hard.WordDistance" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="WordLadder">
+        <java classname="com.question.LeetCode.WordLadder" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="XMLEncoder">
+        <java classname="com.question.moderate.XMLEncoder" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+    <target name="ZeroesInFactorial">
+        <java classname="com.question.moderate.ZeroesInFactorial" failonerror="true" fork="yes">
+            <classpath refid="DataStructures.classpath"/>
+        </java>
+    </target>
+</project>
