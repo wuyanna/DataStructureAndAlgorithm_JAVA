@@ -534,7 +534,7 @@
             <classpath refid="DataStructures.classpath"/>
         </java>
     </target>
-    <target name="(default package)">
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
