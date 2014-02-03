@@ -21,8 +21,9 @@ public class EightQueen {
 	public void placeQueens(int row, Integer[] columns,
 			ArrayList<Integer[]> results) {
 		if (row == GRID_SIZE) {
-			if (!results.contains(columns))
-				results.add(columns);
+			Integer[] r = columns.clone();
+			if (!results.contains(r))
+				results.add(r);
 		} else {
 			for (int col = 0; col < GRID_SIZE; col++) {
 				if (checkValid(columns, row, col)) {

@@ -50,6 +50,11 @@ public class BinarySearchTree implements IBinarySearchTree {
 			}
 		}
 	}
+	
+	// TODO Recusive way of deleting a node
+	public Node remove(Node root, int key) {
+		return null;
+	}
 
 	@Override
 	public void delete(int key) {
@@ -144,6 +149,11 @@ public class BinarySearchTree implements IBinarySearchTree {
 					+ "]");
 			inOrderHelper(nodeToVisit.right);
 		}
+	}
+	
+	// TODO iteratively
+	private void postOrderHelper(Node root) {
+		
 	}
 	
 	@Override

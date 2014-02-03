@@ -9,11 +9,13 @@ public class ArrayStack<T> implements IStack<T> {
 	
 	
 
+	@SuppressWarnings("unchecked")
 	public ArrayStack() {
 		this.array = (T[]) new Object[INITIAL_CAPACITY];
 		nItems = 0;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void push(T obj) {
 		if (isFull()) {
