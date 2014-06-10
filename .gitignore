@@ -1,8 +1,6 @@
 bin
 build
 repos
-.classpath
-.project
 .settings
 .gradle
 .idea
